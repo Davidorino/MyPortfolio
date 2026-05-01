@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Costache - GIS Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #4ca1af);
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        /* Section Layout */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2.section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        /* Project Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder background */
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .skills-tag {
+            display: inline-block;
+            background-color: #e1f0fa;
+            color: var(--secondary-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        /* Resume Section */
+        .resume-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+
+        .resume-section h3 {
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .resume-item {
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Portfolio Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>David Costache</h1>
+        <p>Geography Capstone Portfolio | Seeking Beginner GIS Analyst Roles</p>
+        <p>Motivated professional eager to leverage strong spatial analysis skills, foundational GIS programming, and hands-on mapping experience.</p>
+        <br>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
+
+    <section id="projects">
+        <h2 class="section-title">GIS Portfolio</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <img src="images/project1.jpg" alt="Everglades Depletion Map">
+                <div class="card-content">
+                    <h3>Mapping Florida Everglades Depletion</h3>
+                    <p>Analysis of spatial/temporal vegetation loss in Miami (1999-2023) using Landsat imagery to evaluate the impact of suburban sprawl on ecological health.</p>
+                    <span class="skills-tag">Remote Sensing</span>
+                    <span class="skills-tag">NDVI</span>
+                    <span class="skills-tag">Supervised Classification</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/project2.jpg" alt="Emergency Services Spatial Prediction">
+                <div class="card-content">
+                    <h3>Emergency Services Spatial Prediction</h3>
+                    <p>Spatial regression analysis predicting 911 call densities to evaluate and optimize the future placement of emergency responder stations.</p>
+                    <span class="skills-tag">Regression Analysis</span>
+                    <span class="skills-tag">Predictive Spatial Modeling</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/project3.jpg" alt="Georeferencing Historical Aerial Photography">
+                <div class="card-content">
+                    <h3>Georeferencing Historical Aerial Photography</h3>
+                    <p>Analyzed unreferenced raw historical aerial photography of Austin utility maps to mathematically correct lens distortion and align data to a spatial coordinate system.</p>
+                    <span class="skills-tag">Georeferencing</span>
+                    <span class="skills-tag">Distortion Correction</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/project4.jpg" alt="High-Resolution Campus Mapping">
+                <div class="card-content">
+                    <h3>High-Resolution Campus Mapping</h3>
+                    <p>Digitized and localized layout mapping of Turlington Plaza at the University of Florida utilizing 0.5 ft high-resolution imagery.</p>
+                    <span class="skills-tag">Localized Projection</span>
+                    <span class="skills-tag">Scaling</span>
+                    <span class="skills-tag">High-Res Imagery Processing</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/project5.jpg" alt="Municipal Cartography in ArcGIS Pro">
+                <div class="card-content">
+                    <h3>Municipal Cartography in ArcGIS Pro</h3>
+                    <p>Designed a professional, coherent reference map of District 3 in Hollywood, FL integrating multi-layer municipal geodatabase structures.</p>
+                    <span class="skills-tag">ArcGIS Pro</span>
+                    <span class="skills-tag">Symbology</span>
+                    <span class="skills-tag">Layout Design</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/project6.jpg" alt="Supervised Image Classification of Redlands">
+                <div class="card-content">
+                    <h3>Supervised Image Classification</h3>
+                    <p>Land cover classification of Redlands, CA utilizing graphical communication tools like proportional pie charts to map statistical land distribution.</p>
+                    <span class="skills-tag">Land Use Classification</span>
+                    <span class="skills-tag">Data Visualization</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <div class="resume-container">
+            
+            <div class="resume-section">
+                <h3>Education</h3>
+                <div class="resume-item">
+                    <strong>University of Florida (UF)</strong> | Gainesville, FL<br>
+                    Bachelor of Arts in Geography<br>
+                    <em>Expected Graduation: Summer 2026</em>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>Technical Skills & Certifications</h3>
+                <div class="resume-item">
+                    <strong>Technical Skills:</strong> ArcGIS, Python, Java, Data Analysis, Statistical Modeling<br>
+                    <strong>Certifications:</strong> Certificate in Autodesk AutoCAD
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>Relevant Coursework</h3>
+                <div class="resume-item">
+                    <ul>
+                        <li><strong>Geospatial & Programming:</strong> GIS Programming, Geovisualization Map Design, Foundations of GIS, Programming Fundamentals 1</li>
+                        <li><strong>Quantitative & Data Analysis:</strong> Intro to Quantitative Analysis, Intro to Statistics 1, Analytical Geometry and Calculus 1-3, Differential Equations</li>
+                        <li><strong>Earth Sciences:</strong> Climatology, Weather and Forecasting, Extreme Weather, Dynamic Planet Earth</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h3>Experience</h3>
+                <div class="resume-item">
+                    <strong>Walmart</strong> | Hollywood, FL<br>
+                    <em>Digital Personal Shopper (June 2021 - January 2023)</em>
+                    <ul>
+                        <li>Fulfilled online grocery orders and managed curbside pickups for a high volume of customers.</li>
+                        <li>Navigated large store inventories to accurately select items and meet strict pickup deadlines.</li>
+                        <li>Maintained strong time management in a fast-paced retail environment to hit daily fulfillment metrics.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:DavidCostache@myyahoo.com">DavidCostache@myyahoo.com</a></p>
+        <p>Phone: 331-223-8881</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/david-costache-9773ab21a" target="_blank">linkedin.com/in/david-costache-9773ab21a</a></p>
+        <p style="margin-top: 20px; font-size: 0.8rem;">&copy; 2026 David Costache. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
